@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-4">
+        {{#each burgers}}
+
+        <div class="card">
+            <div class="card-header">
+                EAT-DA-BURGER
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{burger_name}}</h5>
+                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <button class="devourBurger" data-burgerid="{{id}}">Devour Burger</button>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+
+    <div class="col-4">
+        <form>
+            <input type="text" name="burger" id="burgerName" placeholder="What Burger would you like to add?" />
+
+            <button id="addBurger">Add Burger</button>
+        </form>
+    </div>
+</div>

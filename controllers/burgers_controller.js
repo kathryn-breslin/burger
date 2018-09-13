@@ -13,22 +13,22 @@ router.get("/", function(req, res){
     });
 });
 
-// router.put("/burgers/:id", function(req, res) {
-//     var condition = "id = " + req.params.id;
-//     console.log("Condition", condition);
-//     burger.update(
-//         {
-//             devoured: req.body.devoured
-//         }, 
-//         condition, 
-//         function(results) {
-//             if (results.changedRows === 0) {
-//                 return res.status(404).end();
-//             }
-//             res.status(200).end();
-//         }
-//     )
-// });
+router.put("/burgers/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+    console.log("Condition", condition);
+    burger.update(
+        {
+            devoured: req.body.devoured
+        }, 
+        condition, 
+        function(results) {
+            if (results.changedRows === 0) {
+                return res.status(404).end();
+            }
+            res.status(200).end();
+        }
+    )
+});
 
 
 module.exports = router;

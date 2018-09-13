@@ -1,0 +1,8 @@
+.container-fluid {
+    color: yellow;
+}
+.card {
+    margin: 20px;
+    padding: 20px;
+    color: blue;
+}
