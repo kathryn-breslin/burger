@@ -1,8 +1,35 @@
-.container-fluid {
+/* .container-fluid {
     color: yellow;
+} */
+#header h1{
+    background-color: #F8CA47;
+    height: 150px;
+    width: 100%;
+    margin-top:20px;
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    font-size: 150px;
+    text-align: center;
 }
+
 .card {
     margin: 20px;
     padding: 20px;
-    color: blue;
+    color:gray;
+    border: 1px solid black;
 }
+.card-header{
+    color: #C16C28;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+}
+
+body{
+    background-color: #F8CA47;
+}
+
+/* #burgerAddForm{
+    margin-top: 20%;
+    padding: 20px;
+    width: 50px;
+} */

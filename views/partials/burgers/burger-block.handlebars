@@ -1,0 +1,12 @@
+            <div class="card">
+                <div class="card-header">
+                    Burger
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{burger_name}}</h5>
+                    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                    <button class="devourBurger" data-id="{{id}}" data-devouredUpdate="{{devour}}">
+                        {{#if devour}}Devour Burger{{else}}YUM!{{/if}}
+                    </button>
+                </div>
+            </div>

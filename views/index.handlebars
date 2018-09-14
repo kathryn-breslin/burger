@@ -1,26 +1,40 @@
-<div class="row">
-    <div class="col-4">
-        {{#each burgers}}
-
-        <div class="card">
-            <div class="card-header">
-                EAT-DA-BURGER
+<div class="container-fluid">
+    <div class="row" id="header">
+        <div class="col-12">
+            <div class="header">
+                <h1>Eat-Da-Burger</h1>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">{{burger_name}}</h5>
-                <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
-                <button class="devourBurger" data-burgerid="{{id}}">Devour Burger</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devour=true}} {{/unless}} {{/each}}
+        </div>
+
+        <div class="col-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="burgerGif">
+                        <img src="/assets/img/burger.gif" width="400px">
+                    </div>
+                </div>
+            </div>
+<br>
+            <div class="row">
+                <div class="col-12">
+                    <form class="burgerAddForm">
+                        <input class="form-control form-control-lg" type="text" name="burger" id="burgerName" placeholder="burger, burger, burger.."> {{!--
+                        <input type="text" name="burger" id="burgerName" placeholder="Add Burger" /> --}}
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Add Burger</button>
+
+                    </form>
+                </div>
             </div>
         </div>
 
-        {{/each}}
-    </div>
-
-    <div class="col-4">
-        <form>
-            <input type="text" name="burger" id="burgerName" placeholder="What Burger would you like to add?" />
-
-            <button id="addBurger">Add Burger</button>
-        </form>
+        <div class="col-4">
+            {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devour=false}} {{/if}} {{/each}}
+        </div>
     </div>
 </div>
