@@ -1,20 +1,22 @@
 
-$(function () {
+
     $(".devourBurger").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
-        var devouredUpdate = $(this).data("devouredUpdate");
-
+        //var devouredUpdate = $(this).data("devouredUpdate");
+        var devouredUpdate = 1;
         var updatedBurger = {
             devoured: devouredUpdate
         };
 
-        $.ajax("/api/burgers/" + id, {
+        $.ajax({
+            url: window.location.origin + "/api/burgers/" + id, 
             type: "PUT",
             data: updatedBurger
         }).then(function () {
             console.log("The burger has been updated to", devouredUpdate)
             location.reload();
+        
         });
     })
 
@@ -33,4 +35,3 @@ $(function () {
             location.reload();
         })
     })
-})
